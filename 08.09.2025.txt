@@ -1,0 +1,195 @@
+T:Wprowadzenie do PHP
+
+1.PHP jest językiem skryptowym działającym po stronie serwera.
+
+2. Zalety:
+
+-wydajność
+
+-skalowalność
+
+-interfejsy do różnych systemów baz danych
+
+- niski koszt
+
+-łatwość nauki i wykorzystania
+
+- wbudowane biblioteki służące do rozwiązywania różnych popularnych zadań WWW
+
+-łatwość nauki i wykorzystywania
+
+-szeroka obsługa mechanizmów zorientowanych obiektowo
+
+-przenośność
+
+-dostępność kodu źródłowego, wsparcia i dokumentacji.
+
+3.Strony php zapisujemy w plikach z rozszerzeniem .php. Umieszczamy je w folderze ..\xampp\htdocs\. W przeglądarce wpisujemy adres localhost/nazwa_pliku.php
+
+Instrukcje echo i print służą do generowania stringów.
+W Tych instrukcjach kropka jest operatorem konkatenacji czyli łączenia tekstów
+
+
+KOMENTARZE służą do wstawiania opisów lub wyłączenia fragmentów kodu 
+
+OSADZANIE SKRYPTÓW W KODZIE HTML 
+w pliku php umieszczamy kod html owy oraz wstawki php w odpowiednich miejscach, gdzie treść ma być generowana dynamicznie
+
+
+Identyfikator jest nazwą tworzona przez programistę. reguły tworzenia
+dowolna długość określane są litery
+bez pl liter nazwa powinna być intuicyjna przy długich nazwach wielowyrazowych używamy metody camel case lub snake case
+
+ZMIENNA przechowuje informacje zmienna zaczyna się znakiem dolara
+
+
+TYPY DANYCH w php nie ma deklaracji typów danych typy sprawdzamy funkcjami gettype is_int is_float is_strinf var_dump
+
+
+<?php
+$a_bool =TRUE;
+$a_str ="foo";
+$an_int =12;
+$pi =3.141;
+echo gettype($a_bool);
+echo gettype($a_str);
+?>
+
+
+
+
+LICZBY CALKOWITE
+<?php
+$liczba1 = 42;
+print("Liczba to: " . $liczba1);
+
+
+$LiczbaOctalna = 042;
+print("<br>Liczba ósemkowa to: " . $LiczbaOctalna);
+
+
+$LiczbaHex = 0x2A;
+print("<br>Liczba szesnastkowa to: " . $LiczbaHex);
+
+
+$LiczbaBin = 0b101010;
+print("<br>Liczba binarna to: " . $LiczbaBin);
+
+
+$LiczbaZmiennoprzecinkowa = 3.14;
+print("<br>Liczba zmiennoprzecinkowa to: " . $LiczbaZmiennoprzecinkowa);
+
+
+$LiczbaDuza = 1_234_567;
+print("<br>Liczba duża to: " . $LiczbaDuza);
+?>
+
+
+
+
+
+Liczby rzeczywiste
+<?php
+$a = 1.234;
+$b = 1.2e3;
+$c = 7E-10;
+$d = 1_234.567;
+?>
+
+
+STRINGI
+sa to ciagi znaków, zawarty między apostrofami lub cudzysłowami
+
+<?php
+echo 'this is a simple string';
+echo 'You can also have ambedded newlines in strings this way as it is okay to do';
+?>
+
+
+
+
+aby wypisac niektóre znaki uzywamy sposobu modyfikacji lub ucieczki
+
+<?php
+echo 'Arnold once said: "I\'ll be back"<br>';
+echo 'You deleted C:\\*.*?';
+?>
+
+
+
+
+Stringi - w apostrofach
+nie interpretują niektórych znaków modyfikacji:
+
+<?php
+echo 'this will not expand: \n a newline';
+?>
+
+
+
+
+Zmienne w stringach
+<?php
+echo 'Variable value is $Number';
+?>
+
+
+
+Funkcje obsługujące stringi 
+strlen- zwraca dlugosc tekstu
+mb_strlen -zwraca dlugosc tekstu z poslkimi znakami
+
+
+<?php
+echo strlen("Łódź"); // outputs 7 // polskie znaki w unicode zajmują dwa bajty
+echo strlen("Hello world!"); // outputs 12
+echo mb_strlen("Łódź"); // outputs 4
+?>
+
+
+
+
+
+str_word count() - liczy wyrazya
+
+<?php
+echo str_word_count("Hello world!"); // output
+?>
+
+
+str_replace zastępuje text stringiem  
+
+<?php
+echo str_replace("world","dolly","Hello world"); // output
+?>
+
+
+
+
+
+
+STRPOS wyszukuje slowo i liczy ile ma liter
+<?php
+echo strpos("Hello world!", "world");
+?>
+
+
+
+
+
+
+<?php
+printf( )
+printf( string $format, mixed ...$values) - Output a formatted string
+$tekst = "Hello";
+printf("[%s]\n", $tekst); // wypisze [Hello]
+printf("[%10s]\n", $tekst); // wypisze [
+Hello]
+printf("[%-10s]\n", $tekst); // wypisze [Hello ]
+printf("[%.3s]\n", $tekst); // wypisze [Hel] printf("[%10.3s]\n", $tekst); // wypisze [ printf("[%-10.3s] \n", $tekst); // wypisze [Hel
+[Hel]
+
+
+
+
+?>
