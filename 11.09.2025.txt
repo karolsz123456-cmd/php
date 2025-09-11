@@ -1,0 +1,113 @@
+Temat: Referencje.
+
+Zmienne - nadanie wartości przez referencje
+
+<?php
+$foo = 'Bob';
+$bar = &$foo;
+$bar= 'Andy';
+echo $bar;
+echo $foo ;
+?>
+
+
+
+
+
+ZMIENNE statyczne - jest inicjalizowana tylko RAZ. Jest ona wykorzystywana jako licznik uruchomień funkcji.
+
+<?php
+function test() {
+    static $licznik=0;
+    echo $licznik . "<br>";
+    $licznik++;
+}
+test();
+test();
+test();
+?>
+
+
+STAŁE są to nazwy, identyfikujące proste wartości. Jak sama nazwa wskazuje, nie mogą się one zmieniać w trakcie wykonywania skryptu.
+
+<?php
+define("CONSTANT", "Hello World.");
+echo CONSTANT; // outputs "Hello World".
+?>
+
+
+
+TABLICA jest listą elementów umieszczonych jeden za drugim,
+Do wybranego elementu odwołujemy się podając indeks czyli jego numer, numerujemy od zera
+<?php
+$cars = array("Volvo","BMW","Toyota");
+echo "I like " .$cars[0] . ", " . $cars[1] ."". $cars[2] . ".";
+
+
+$fruits = ["Apple", "Banana", "Orange"];
+echo var_dump($fruits)."<br>";
+
+
+$names = [];
+$names[0] = "John";
+$names[1] = "Jane";
+$names[2] = "Doe";
+print var_dump($names);
+?>
+
+
+
+
+
+
+Tablice asocjacyjne przechowują elementu parami tzn klucz i wartość
+
+<?php
+$age=[];
+$age['Peter'] = "35";
+$age['Ben'] = "37";
+$age['Joe'] = "43";
+?>
+
+
+Tablice wielowymiarowe
+Tablica wielowymiarowa posiada elementy będące tablicami 
+
+
+<?php
+echo "<table>\n";
+echo "<tr><td>Car</td><td>In stock</td></tr>\n";
+echo "<tr><td>" . $cars[0][0] . "</td><td>" . $cars[0][1] . "</td></tr>\n";
+echo "<tr><td>" . $cars[1][0] . "</td><td>" . $cars[1][1] . "</td></tr>\n";
+echo "</table>";
+?>
+
+
+
+
+
+Sortowanie tablic indeksowanych
+
+<?php
+$cars = array("Volvo", "BMW", "Toyota");
+
+
+sort( $cars ); // sort arrays in ascending order
+                       // output: ["BMW","Toyota","Volvo"]
+
+
+rsort( $cars ); // sort arrays in descending order
+                        // output: ["Volvo","Toyota","BMW"]                      
+
+
+?>
+
+
+Sortowanie tablic asocjacyjnych
+<?php
+$age = array("Peter"=>"35","Ben"=>"37","Joe"=>"43");
+asort($age);
+ksort$($age);
+?>
+
+
