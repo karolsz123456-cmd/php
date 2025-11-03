@@ -8,7 +8,7 @@ if(!$conn){
 }
 echo"Connected successfully";
 
-$database="goetel433s";
+$database="goetel43";
 $sql="create database $database";
 if(mysqli_query($conn,$sql)){
     echo "Database created succcessfully";
