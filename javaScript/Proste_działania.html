@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Proste Działania</title>
+</head>
+<body>
+        <Form>
+<label for="1">Podaj pierwszą liczbę</label>
+  <input type="number" id="1" />
+  <label for="2">Podaj drugą liczbę</label>
+  <input type="number" id="2" />
+        </Form>
+        <button onclick="dodawanie()">dodwanie</button>
+        <button onclick="odejmowanie()">odejmowanie</button>
+        <button onclick="dzielenie()">dzielenie</button>
+        <button onclick="mnożenie()">mnożenie</button>
+        <br></br>
+<div id="koniec"> </div>
+<br></br>
+    </body>
+    <script>
+        
+ 
+function dodawanie(){ 
+   const liczba1 =  document.getElementById("1").valueAsNumber;
+    const liczba2 =  document.getElementById("2").valueAsNumber;
+    const abc=document.getElementById("koniec");
+    const wynik=liczba1+liczba2;
+     abc.textContent='Wynik:'+wynik;
+
+ 
+}
+function odejmowanie(){ 
+   const liczba1 =  document.getElementById("1").valueAsNumber;
+    const liczba2 =  document.getElementById("2").valueAsNumber;
+    const abc=document.getElementById("koniec");
+    const wynik=liczba1-liczba2;
+     abc.textContent='Wynik:'+wynik;
+
+ 
+}
+function mnożenie(){ 
+   const liczba1 =  document.getElementById("1").valueAsNumber;
+    const liczba2 =  document.getElementById("2").valueAsNumber;
+    const abc=document.getElementById("koniec");
+    const wynik=liczba1*liczba2;
+     abc.textContent='Wynik:'+wynik;
+
+ 
+}
+function dzielenie(){ 
+   const liczba1 =  document.getElementById("1").valueAsNumber;
+    const liczba2 =  document.getElementById("2").valueAsNumber;
+    const abc=document.getElementById("koniec");
+    const wynik=liczba1/liczba2;
+     abc.textContent='Wynik:'+wynik;
+
+ 
+}
+
+
+    </script>
+ 
+</head>
+ 
