@@ -1,0 +1,9 @@
+<button id="myButton">Wyswietl imie</button>
+<script>
+     document.querySelector("#myButton").onclick=Wyswietlimie;
+    function Wyswietlimie(){
+        let newElement=document.createElement("p");
+        newElement.textContent= "Karol";
+        document.body.appendChild(newElement);
+    }
+    </script>
